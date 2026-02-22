@@ -1257,7 +1257,7 @@ h2 {
 }
 
 /* MOBILE NAV */
-
+/* MOBILE NAV MENU */
 @media (max-width: 768px) {
 
   .hamburger {
@@ -1271,15 +1271,21 @@ h2 {
     height: 100%;
     width: 260px;
     background: #0f0f0f;
-    flex-direction: column;
-    padding-top: 80px;
-    transition: 0.35s;
+
+    /* ⭐ THIS IS THE IMPORTANT PART */
+    display: flex;
+    flex-direction: column;   /* STACK VERTICALLY */
+    align-items: center;
+
+    padding-top: 90px;
+    transition: 0.35s ease;
     z-index: 999;
   }
 
   .nav-links a {
-    margin: 18px 0;
-    font-size: 18px;
+    margin: 16px 0;
+    font-size: 20px;
+    width: 100%;
     text-align: center;
   }
 
@@ -1287,9 +1293,3 @@ h2 {
     right: 0;
   }
 }
-html, body {
-  overflow-x: hidden;
-}
-
-
-
