@@ -1287,4 +1287,8 @@ h2 {
     right: 0;
   }
 }
+html, body {
+  overflow-x: hidden;
+}
+
 
