@@ -18,7 +18,7 @@ margin:auto;
 
 /* NAV */
 nav{
-background:#3d3727;
+background:#000;
 position:sticky;
 top:0;
 z-index:100;
@@ -30,6 +30,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:14px 0;
+  background:#fa0505;
 }
 
 /* Logo + text inline */
@@ -1532,6 +1533,7 @@ footer {
 /* ===============================
    STICKY LEFT MENU (DESKTOP)
    =============================== */
+
 
 
 
