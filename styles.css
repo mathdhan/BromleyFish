@@ -1529,5 +1529,15 @@ footer {
   }
 }
 
+/* ===============================
+   STICKY LEFT MENU (DESKTOP)
+   =============================== */
+
+.menu-left {
+  position: sticky;
+  top: 110px;   /* adjust depending on navbar height */
+  align-self: start;
+  height: fit-content;
+}
 
 
