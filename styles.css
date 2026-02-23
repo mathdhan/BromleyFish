@@ -18,7 +18,7 @@ margin:auto;
 
 /* NAV */
 nav{
-background:#000;
+background:#3d3727;
 position:sticky;
 top:0;
 z-index:100;
@@ -1528,5 +1528,6 @@ footer {
     margin: 0 auto 20px auto;  /* center the gold line */
   }
 }
+
 
 
