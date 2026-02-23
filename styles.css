@@ -1426,6 +1426,65 @@ footer {
 
   transition: all 0.3s ease;
 }
+/* ===== MOBILE MENU PAGE FIX ===== */
+@media (max-width: 768px) {
+
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Stack sidebar and content vertically */
+  .menu-layout {
+    display: block;
+    padding: 20px 12px;
+  }
+
+  /* Make sidebar full width */
+  .menu-sidebar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Reduce sidebar padding */
+  .menu-sidebar ul {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 10px;
+  }
+
+  /* Sidebar items become horizontal pills */
+  .menu-sidebar li {
+    margin: 0;
+  }
+
+  .menu-sidebar a {
+    display: inline-block;
+    background: #1a1a1a;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+
+  /* Content full width */
+  .menu-section {
+    width: 100%;
+  }
+
+  /* Menu item cards stack nicely */
+  .menu-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu-item img {
+    width: 90px;
+    height: 70px;
+  }
+}
 
 
 
