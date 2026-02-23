@@ -1337,31 +1337,65 @@ footer {
 /* HAMBURGER MENU FIX */
 /* ============================= */
 
+/* ============================= */
+/* ⭐ PREMIUM COMPACT MOBILE NAV */
+/* ============================= */
+
 @media (max-width: 768px) {
 
   .nav-links {
-    position: fixed;
+    position: absolute;
 
-    /* ⭐ START BELOW NAVBAR */
-    top: 70px; /* adjust to your navbar height */
+    /* Position below navbar */
+    top: 70px;
+    right: 16px;
 
-    right: -100%;
-    height: calc(100vh - 70px);
-    width: 260px;
+    width: 220px;
+    height: auto; /* ⭐ NOT full height */
 
-    background: #0f0f0f;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(12px);
+
+    border-radius: 14px;
+    padding: 12px 0;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 
-    padding-top: 30px;
-    transition: right 0.35s ease;
+    box-shadow:
+      0 12px 35px rgba(0,0,0,0.45),
+      inset 0 0 0 1px rgba(255,255,255,0.05);
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: all 0.25s ease;
     z-index: 10001;
   }
 
   .nav-links.active {
-    right: 0;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    padding: 14px 18px;
+    font-size: 16px;
+    text-align: left;
+
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a:hover {
+    background: rgba(255,215,0,0.08);
+    color: #FFD700;
   }
 
 }
@@ -1373,5 +1407,6 @@ footer {
 * {
   max-width: 100%;
 }
+
 
 
