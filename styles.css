@@ -1293,3 +1293,87 @@ h2 {
     right: 0;
   }
 }
+/* ============================= */
+/* 🔥 MOBILE BUG FIX PATCH */
+/* ============================= */
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Ensure containers never overflow */
+.container,
+.hero,
+.section,
+footer {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ============================= */
+/* FLOATING BUTTONS FIX */
+/* ============================= */
+
+/* Use ONLY this floating system */
+.floating-buttons {
+  position: fixed;
+  right: 14px;
+  bottom: 18px;
+  z-index: 10002; /* Above menu */
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Hide the duplicate floating-btn system */
+.floating-btn {
+  display: none !important;
+}
+
+/* ============================= */
+/* HAMBURGER MENU FIX */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* Proper mobile nav panel */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 260px;
+    background: #0f0f0f;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 90px;
+    transition: right 0.35s ease;
+    z-index: 10001; /* Below floating buttons */
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  /* Prevent background black stretching */
+  nav, .navbar {
+    width: 100%;
+    overflow: hidden;
+  }
+
+}
+
+/* ============================= */
+/* FIX FOR 100vw OVERFLOW */
+/* ============================= */
+
+* {
+  max-width: 100%;
+}
+
